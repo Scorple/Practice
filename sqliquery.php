@@ -34,7 +34,7 @@ echo "query successful\n";
 
 while ($row = mysqli_fetch_row($result)) {
 
-printf ("%d: %s\n", $row [0], $row[1]);
+printf ("%d: %s\n", $row[0], $row[1]);
 
 }
 

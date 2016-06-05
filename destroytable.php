@@ -10,6 +10,16 @@ echo "variables set\n";
 
 
 
+if ($argc == 2) {
+
+$tablename = $argv[1];
+
+}
+
+echo "tablename is: " . $tablename . "\n";
+
+
+
 $mysqli = new mysqli($dbhost, $dbusername, $dbuserpass) or die ("can't connect to database\n");
 
 echo "database linked\n";
@@ -34,7 +44,7 @@ echo "database selected\n";
 
 $mysqli->query("
 
-DROP TABLE IF EXISTS $tablename
+DROP TABLE $tablename
 
 ") or die ("can't drop table: " . mysqli_error($mysqli) . "\n");
 
